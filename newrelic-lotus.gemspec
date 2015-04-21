@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Yuri Artemev']
   spec.email         = ['i@artemeff.com']
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Gem for connecting NewRelic and Lotus}
   spec.homepage      = 'https://github.com/artemeff/newrelic-lotus'
   spec.license       = 'MIT'
 
