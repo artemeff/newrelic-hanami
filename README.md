@@ -2,6 +2,10 @@
 
 ---
 
+[![Travis](https://img.shields.io/travis/artemeff/newrelic-lotus.svg)]() [![Code Climate](https://codeclimate.com/github/artemeff/newrelic-lotus/badges/gpa.svg)](https://codeclimate.com/github/artemeff/newrelic-lotus)
+
+---
+
 TODO: add readme
 
 ---
