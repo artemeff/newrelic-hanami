@@ -1,5 +1,3 @@
-require 'lotus/welcome'
-
 describe NewRelic::Agent::Instrumentation::Lotus do
   subject do
     NewRelic::Agent::Instrumentation::ControllerInstrumentation
