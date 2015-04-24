@@ -6,6 +6,8 @@
 
 ---
 
+This gem ingrates in lotus-controller and can be used in full-featured lotus framework and with controller only.
+
 ```ruby
 gem 'newrelic-lotus'
 ```
@@ -32,7 +34,7 @@ run Lotus::Container.new
 
 ```
 
-And add `newrelic.yml` to `config` folder.
+Then add `newrelic.yml` to `config` folder.
 
 ---
 
