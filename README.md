@@ -6,7 +6,33 @@
 
 ---
 
-TODO: add readme
+```ruby
+gem 'newrelic-lotus'
+```
+
+Add it to your `config.ru`:
+
+```ruby
+require 'newrelic_rpm'
+require 'newrelic-lotus'
+
+NewRelic::Agent.manual_start
+```
+
+It should looks like:
+
+```
+require './config/environment'
+require 'newrelic_rpm'
+require 'newrelic-lotus'
+
+NewRelic::Agent.manual_start
+
+run Lotus::Container.new
+
+```
+
+And add `newrelic.yml` to `config` folder.
 
 ---
 
