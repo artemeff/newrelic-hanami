@@ -21,7 +21,7 @@ NewRelic::Agent.manual_start
 
 It should looks like:
 
-```
+```ruby
 require './config/environment'
 require 'newrelic_rpm'
 require 'newrelic-lotus'
