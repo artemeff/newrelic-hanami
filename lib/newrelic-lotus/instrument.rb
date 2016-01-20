@@ -1,6 +1,7 @@
 require 'new_relic/agent/instrumentation'
 require 'new_relic/agent/instrumentation/controller_instrumentation'
 require 'lotus/controller'
+require 'rack'
 
 module NewRelic
   module Agent
