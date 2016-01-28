@@ -1,11 +1,11 @@
-describe NewRelic::Agent::Instrumentation::Lotus do
+describe NewRelic::Agent::Instrumentation::Hanami do
   subject do
     NewRelic::Agent::Instrumentation::ControllerInstrumentation
   end
 
   let(:action) do
     Class.new do
-      include Lotus::Action
+      include Hanami::Action
 
       def call(params)
         self.body = 'hello'

@@ -1,4 +1,4 @@
-describe NewRelic::Lotus do
+describe NewRelic::Hanami do
   it 'has a version' do
     expect(described_class::VERSION).not_to be_nil
   end
