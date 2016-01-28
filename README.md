@@ -1,22 +1,22 @@
-### NewRelic Lotus
+### NewRelic Hanami
 
 ---
 
-[![Travis](https://img.shields.io/travis/artemeff/newrelic-lotus.svg)]() [![Code Climate](https://codeclimate.com/github/artemeff/newrelic-lotus/badges/gpa.svg)](https://codeclimate.com/github/artemeff/newrelic-lotus)
+[![Travis](https://img.shields.io/travis/artemeff/newrelic-hanami.svg)]() [![Code Climate](https://codeclimate.com/github/artemeff/newrelic-hanami/badges/gpa.svg)](https://codeclimate.com/github/artemeff/newrelic-hanami)
 
 ---
 
-This gem ingrates in lotus-controller and can be used in full-featured lotus framework and with controller only.
+This gem ingrates in hanami-controller and can be used in full-featured hanami framework and with controller only.
 
 ```ruby
-gem 'newrelic-lotus'
+gem 'newrelic-hanami'
 ```
 
 Add it to your `config.ru`:
 
 ```ruby
 require 'newrelic_rpm'
-require 'newrelic-lotus'
+require 'newrelic-hanami'
 
 NewRelic::Agent.manual_start
 ```
@@ -26,11 +26,11 @@ It should looks like:
 ```ruby
 require './config/environment'
 require 'newrelic_rpm'
-require 'newrelic-lotus'
+require 'newrelic-hanami'
 
 NewRelic::Agent.manual_start
 
-run Lotus::Container.new
+run Hanami::Container.new
 
 ```
 

@@ -1,9 +1,9 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'lotus/controller'
+require 'hanami/controller'
 require 'newrelic_rpm'
-require 'newrelic-lotus'
+require 'newrelic-hanami'
 
 RSpec.configure do |config|
   config.before(:suite) do
