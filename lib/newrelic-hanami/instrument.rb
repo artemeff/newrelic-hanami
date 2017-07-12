@@ -8,6 +8,7 @@ module NewRelic
     module Instrumentation
       module Hanami
         include ControllerInstrumentation
+        NAME_REGEX = /Controllers::/.freeze
 
       protected
 
@@ -22,7 +23,7 @@ module NewRelic
         def _trace_options
           {
             category: :controller,
-            path:     "#{request.request_method} #{request.path}",
+            name:     self.class.name.sub(NAME_REGEX, ''),
             request:  request,
             params:   params.to_h
           }
