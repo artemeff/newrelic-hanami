@@ -22,7 +22,7 @@ module NewRelic
         def _trace_options
           {
             category: :controller,
-            path:     "#{request.request_method} #{request.path}",
+            name:     self.class.name.gsub('Controllers::', ''),
             request:  request,
             params:   params.to_h
           }
