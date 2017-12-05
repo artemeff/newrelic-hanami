@@ -26,7 +26,7 @@ module NewRelic
             category:   :controller,
             class_name: trace_class_name,
             name:       trace_method_name,
-            request:    request,
+            request:    self,
             params:     params.to_h
           }
         end
