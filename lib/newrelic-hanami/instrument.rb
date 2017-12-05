@@ -20,14 +20,32 @@ module NewRelic
 
       private
 
+        # providing :class_name and :name produces 'Web::User#Get' for the transaction naming
         def _trace_options
           {
-            category: :controller,
-            name:     self.class.name.sub(NAME_REGEX, ''),
-            request:  request,
-            params:   params.to_h
+            category:   :controller,
+            class_name: trace_class_name,
+            name:       trace_method_name,
+            request:    request,
+            params:     params.to_h
           }
         end
+
+        ## like 'Web::User::Get' => ['Web','User','Get']
+        def trace_controller_names
+          @trace_controller_names ||= self.class.name.sub(NAME_REGEX, '').split('::')
+        end
+
+        ## 'Get'
+        def trace_method_name
+          trace_controller_names.last
+        end
+
+        ## 'Web::User'
+        def trace_class_name
+          trace_controller_names[0...-1].join('::')
+        end
+
       end
     end
   end

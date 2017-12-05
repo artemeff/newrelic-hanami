@@ -34,6 +34,24 @@ run Hanami::Container.new
 
 ```
 
+If that doesn't work, include this in your `web/application.rb`:
+```
+module Web
+  class Application < Hanami::Application
+    configure do
+      ...
+
+      controller.prepare do
+        include ::NewRelic::Agent::Instrumentation::Hanami
+      end
+
+      ...
+    end
+  end
+end
+```
+
+
 Then add `newrelic.yml` to `config` folder.
 
 ---
