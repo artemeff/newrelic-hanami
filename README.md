@@ -21,7 +21,7 @@ require 'newrelic-hanami'
 NewRelic::Agent.manual_start
 ```
 
-It should looks like:
+It should look like:
 
 ```ruby
 require './config/environment'
